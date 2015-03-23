@@ -1,0 +1,8 @@
+exportPattern("^[[:alpha:]]+")
+importFrom(partitions, compositions)
+importFrom(aster, rktp)
+S3method(rTableICC.RxC,default)
+S3method(rTable.RxC,default)
+S3method(rTableICC.2x2xK,default)
+S3method(rTable.2x2xK,default)
+S3method(print,rTableICC)
