@@ -8,6 +8,6 @@ function(p=NULL,theta,M,row.margins=NULL,col.margins=NULL,sampling="Multinomial"
 
   tbl = rtableICC.RxC.main(p,theta,M,row.margins,col.margins,sampling,N,lambda,zero.clusters,print.regular,print.raw)
   tbl$call = match.call()
-  class(tbl) = "rTableICC.RxC"
+  class(tbl) = c("rTableICC.RxC", "rTableICC")
   tbl
 }

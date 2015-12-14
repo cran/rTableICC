@@ -133,7 +133,7 @@ zeros=FALSE                                  # Do not allow zero sized clusters
 
 x=rTableICC.2x2xK(p=cell.prob,theta=ICCs,M=num.cluster,sampling=sampl,zero.clusters=zeros,
                    N=num.obs,print.regular=TRUE,print.raw=FALSE)
-print.rTableICC(x)                          
+print(x)                          
 
 # --- Generate a 2x2x4 contingency table under product multinomial sampling plan ---
 
@@ -146,7 +146,7 @@ zeros=FALSE                                  # Do not allow zero sized clusters
 
 y=rTableICC.2x2xK(p=cell.prob,theta=ICCs,M=num.cluster,sampling=sampl,
                   zero.clusters=zeros,N=num.obs,print.regular=TRUE,print.raw=FALSE)
-print.rTableICC(y)
+print(y)
 
 # --- Generate a 2x2x4 contingency table under Poisson sampling plan ---
 
@@ -159,7 +159,7 @@ cell.prob=array(0.0625,dim=c(num.centers,4)) # Cell probabilities sum up
 
 z1=rTableICC.2x2xK(p=cell.prob,lambda=cell.mean,theta=ICCs,M=num.cluster,
                     sampling=sampl,N=num.obs,print.regular=TRUE,print.raw=FALSE)
-print.rTableICC(z1)
+print(z1)
 
 cell.mean=c(2,3,3,2)                         # Assign equal mean number of individual 
                                              #  to cells under each center
@@ -170,7 +170,7 @@ ICCs[1]=0                                    # Assign zero ICC to clusters with 
 
 z2=rTableICC.2x2xK(p=cell.prob,lambda=cell.mean,theta=ICCs,M=num.cluster,
                     sampling=sampl,N=num.obs,print.regular=TRUE,print.raw=FALSE)
-print.rTableICC(z2)
+print(z2)
 }
 
 \keyword{ datagen }

@@ -77,7 +77,7 @@ cell.prob=array(0.03125,dim=c(2,2,num.centers)) # Enter cell probabilities in 2x
 num.obs=124                                     # Number of observations
 
 x=rTable.2x2xK(p=cell.prob,sampling=sampl,N=num.obs)
-print.rTableICC(x)
+print(x)
 
 # --- Generate a 2x2x8 contingency table under product multinomial sampling plan ---
 sampl="Product"                                 # Generate table under product 
@@ -85,7 +85,7 @@ sampl="Product"                                 # Generate table under product
 center.margins=array(10,num.centers)            # Enter center margins 
 
 y=rTable.2x2xK(p=cell.prob,sampling=sampl,N=center.margins)
-print.rTableICC(y)
+print(y)
 
 # --- Generate a 2x2x8 contingency table under Poisson sampling plan ---
 num.centers=3
@@ -95,7 +95,7 @@ cell.mean=array(3,dim=c(2,2,num.centers))       # Enter mean number of individua
                                                 #  in each cell
 
 z=rTable.2x2xK(sampling=sampl,lambda=cell.mean)
-print.rTableICC(z)
+print(z)
 }
 \keyword{ datagen }
 \keyword{contingency}

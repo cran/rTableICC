@@ -7,6 +7,6 @@ function(p,theta,M,sampling="Multinomial",N=0,lambda=NULL,zero.clusters=FALSE,pr
     
     tbl = rtableICC.2x2xK.main(p,theta,M,sampling,N,lambda,zero.clusters,print.regular,print.raw)
     tbl$call = match.call()
-    class(tbl) = "rTableICC.2x2xK"
+    class(tbl) = c("rTableICC.2x2xK", "rTableICC")
     tbl
 }

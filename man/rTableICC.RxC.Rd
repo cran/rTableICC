@@ -136,7 +136,7 @@ zeros=FALSE                                 # Do not allow zero sized clusters
 x=rTableICC.RxC(p=cell.prob,theta=ICCs,M=num.cluster,sampling=sampl,
                  N=num.obs,zero.clusters=zeros,print.regular=TRUE,
                  print.raw=FALSE)
-print.rTableICC(x) 
+print(x) 
 
 # --- Generate a 2x3 contingency table under product multinomial sampling plan ---
 # --- with fixed row margins                                                   ---
@@ -152,7 +152,7 @@ cell.prob[2,3]=0.3                          # Marginal and cell probabilities
 
 y1=rTableICC.RxC(p=cell.prob,theta=ICCs,row.margins=row,M=num.cluster,
                   sampling=sampl,print.regular=TRUE,print.raw=FALSE)
-print.rTableICC(y1)
+print(y1)
 
 # --- Generate a 3x2 contingency table under product multinomial sampling plan ---
 # --- with fixed cloumn margins                                                ---
@@ -166,7 +166,7 @@ cell.prob[3,2]=0.3
 
 y2=rTableICC.RxC(p=cell.prob,theta=ICCs,col.margins=col,M=num.cluster,
                   sampling=sampl,print.regular=TRUE,print.raw=FALSE)
-print.rTableICC(y2)
+print(y2)
 
 # --- Generate a 4x3 contingency table under Poisson sampling plan ---
 sampl="Poisson"                             # Generate table under product 
@@ -180,7 +180,7 @@ ICCs[1]=0
 
 z=rTableICC.RxC(p=cell.prob,lambda=cell.mean,theta=ICCs,row.margins=row,
                  M=num.cluster,sampling=sampl,print.regular=TRUE,print.raw=FALSE)
-print.rTableICC(z)
+print(z)
 
 }
 \keyword{ datagen }

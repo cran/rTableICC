@@ -7,7 +7,7 @@ function(p=NULL,sampling="Multinomial",N=NULL,K=NULL,lambda=NULL,print.raw=FALSE
   
   tbl = rtable.2x2xK.main(p,sampling,N,K,lambda,print.raw)
   tbl$call = match.call()
-  class(tbl) = "rTable.2x2xK"
+  class(tbl) = c("rTable.2x2xK", "rTableICC")
   tbl
   
 }

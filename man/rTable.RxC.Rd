@@ -85,7 +85,7 @@ cell.prob=array(1/35,dim=c(num.row,num.col))    # Enter cell probabilities
 num.obs=124                                     # Number of observations
 
 x=rTable.RxC(p=cell.prob,sampling=sampl,N=num.obs)
-print.rTableICC(x)
+print(x)
 
 # --- Generate a 3x3 contingency table under product multinomial sampling plan  ---
 # --- with fixed row margins                                                    ---
@@ -107,7 +107,7 @@ cell.prob[3,3]=11/55-0.15                       # Marginal and cell probabilitie
                                                 #  should be equal to each other
 
 y1=rTable.RxC(p=cell.prob,sampling=sampl,row.margins=row)
-print.rTableICC(y1)
+print(y1)
 
 # --- Generate a 3x3 contingency table under product multinomial sampling plan ---
 # --- with fixed row margins                                                   ---
@@ -129,7 +129,7 @@ cell.prob[3,3]=0.1                             # Marginal and cell probabilities
                                                #  should be equal to each other
 
 y2=rTable.RxC(p=cell.prob,sampling=sampl,col.margins=col)
-print.rTableICC(y2)
+print(y2)
 
 # --- Generate a 6x4 contingency table under Poisson sampling plan ---
 num.row=6                                       # Number of rows
@@ -140,7 +140,7 @@ cell.mean=array(3,dim=c(6,4))                   # Enter mean number of individua
                                                 #  in each cell
 
 z=rTable.RxC(lambda=cell.mean,sampling=sampl)
-print.rTableICC(z)
+print(z)
 
 }
 \keyword{ datagen }

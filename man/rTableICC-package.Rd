@@ -12,8 +12,8 @@ Contains functions for random generation of R x C and 2 x 2 x K contingency tabl
 \tabular{ll}{
 Package: \tab rTableICC\cr
 Type: \tab Package\cr
-Version: \tab 1.0.1\cr
-Date: \tab 2015-01-29\cr
+Version: \tab 1.0.3\cr
+Date: \tab 2015-12-14\cr
 License: \tab GPL-3\cr
 }
 
@@ -72,7 +72,7 @@ cell.prob=array(0.0625,dim=c(num.centers,4)) # Cell probabilities sum up to one
 
 x=rTableICC.2x2xK(p=cell.prob,theta=ICCs,M=num.cluster,sampling=sampl,
                    N=num.obs,print.regular=TRUE,print.raw=FALSE)
-print.rTableICC(x)       
+print(x)       
 
 # --- Generate a 2x3 contingency table under product multinomial sampling plan  ---
 # --- with fixed row margins with ICCs                                          ---
@@ -93,7 +93,7 @@ cell.prob[2,3]=0.3                           # Marginal and cell probabilities
 
 y=rTableICC.RxC(p=cell.prob,theta=ICCs,row.margins=row,M=num.cluster,
                  sampling=sampl,print.regular=TRUE,print.raw=FALSE)
-print.rTableICC(y)
+print(y)
 
 # --- Generate a 2x2x8 contingency table under Poisson sampling plan without ICC ---
 num.centers=8                               # Number of centers
@@ -103,7 +103,7 @@ cell.mean=array(3,dim=c(2,2,num.centers))   # Enter mean number of individuals
                                             #  in each cell
 
 z=rTable.2x2xK(sampling=sampl,lambda=cell.mean)
-print.rTableICC(z)
+print(z)
 
 # --- Generate a 5x7 contingency table under multinomial sampling plan without ICC ---
 num.row=5                                   # Number of rows
@@ -115,6 +115,6 @@ cell.prob=array(1/35,dim=c(num.row,num.col))# Enter cell probabilities in RxC
 num.obs=124                                 # Number of observations
 
 u=rTable.RxC(p=cell.prob,sampling=sampl,N=num.obs)
-print.rTableICC(u)
+print(u)
 
 }
