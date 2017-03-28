@@ -1,8 +1,8 @@
-6128ccab2759aebd45d90fea2ed5f3a1 *DESCRIPTION
+b97a21615dc667584cc2345386ca37af *DESCRIPTION
 c348cabd9088b6a765f12e1bc1aa572b *NAMESPACE
 f4214dba15b781bc862306198f68d3fc *R/check.R
 a21ba1c68552663175d2fea515dc86c7 *R/print.rTableICC.R
-f330d1dd1f4ef637be2cd879fbe03bf1 *R/rDiscrete.R
+6d9e24f5dfbbd98a57faad13066f0f2b *R/rDiscrete.R
 c4d62f82d6dfd1858ab67e603d656cea *R/rTable.2x2xK.R
 9d6d32e397a6092e88c4b0436492b04a *R/rTable.2x2xK.default.R
 4aa67edddd60d0d95632830b46d908f0 *R/rTable.RxC.R
