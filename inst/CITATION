@@ -1,0 +1,17 @@
+citEntry(
+  entry = "Article",
+  title =" rTableICC: An {R} package for random generation of {2x2xK} and {RxC} contingency tables",
+  author = personList(as.person("H. Demirhan")),
+  journal = "The R Journal",
+  year = "2016",
+  volume = "8",
+  number = "1",
+  pages = "48-63",
+  url = "https://journal.r-project.org/archive/2016-1/demirhan.pdf",
+  textVersion  =
+  paste("Demirhan H.",
+    "rTableICC: An {R} package for random generation of 2x2xK and RxC contingency tables",
+    "The R Journal. 2016; 8(1): 48-63.",
+    "URL https://journal.r-project.org/archive/2016-1/demirhan.pdf"),
+  header = "To cite the R package rTableICC in publications use:",
+)

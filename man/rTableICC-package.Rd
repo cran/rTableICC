@@ -6,14 +6,14 @@
 Random Generation of R x C and  2 x 2 x K Contingency Tables
 }
 \description{
-Contains functions for random generation of R x C and 2 x 2 x K contingency tables. In addition to the generation of contingency tables over predetermined intraclass-correlated clusters, it is possible to generate contingency tables without intraclass correlations under product multinomial, multinomial, and Poisson sampling plans. It also consists of a function for generation of random data from a given discrete probability distribution function.
+Contains functions for random generation of R x C and 2 x 2 x K contingency tables. In addition to the generation of contingency tables over predetermined intraclass-correlated clusters, it is possible to generate contingency tables without intraclass correlations under product multinomial, multinomial, and Poisson sampling plans. It also consists of a function for generation of random data from a given discrete probability distribution function (Demirhan, 2016).
 }
 \details{
 \tabular{ll}{
 Package: \tab rTableICC\cr
 Type: \tab Package\cr
-Version: \tab 1.0.3\cr
-Date: \tab 2015-12-14\cr
+Version: \tab 1.0.6\cr
+Date: \tab 2018-01-18\cr
 License: \tab GPL-3\cr
 }
 
@@ -36,6 +36,8 @@ Altham, P.M. (1976) Discrete variable analysis for individuals grouped into fami
 
 Nandram, B. and Choi, J.W. (2006) Bayesian analysis of a two-way categorical table incorporating intraclass correlation,
 \emph{Journal of Statistical Computation and Simulation} \bold{76}, 233--249.
+
+Demirhan, H. (2016) rTableICC: An R package for random generation of 2x2xK and RxC contingency tables, \emph{The R Journal} \bold{8}, 1, 48--63.
 
 Demirhan, H. (2013) Bayesian estimation of log odds ratios over two-way contingency tables with intraclass-correlated cells, \emph{Journal of Applied Statistics} \bold{40}, 2303--2316.
 

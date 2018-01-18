@@ -1,4 +1,4 @@
-b97a21615dc667584cc2345386ca37af *DESCRIPTION
+0e803d5b66f12fd2928cf701d92172c4 *DESCRIPTION
 c348cabd9088b6a765f12e1bc1aa572b *NAMESPACE
 f4214dba15b781bc862306198f68d3fc *R/check.R
 a21ba1c68552663175d2fea515dc86c7 *R/print.rTableICC.R
@@ -17,11 +17,12 @@ a31bbb90022a4e9df8d94910c0052b0f *R/rtable.2x2xK.main.R
 bab22b799a9e453b1f412436626fbe85 *R/rtableICC.2x2xK.main.R
 5acf688912ebc70f766409139668fd61 *R/rtableICC.RxC.engine.R
 af58e24befb2e774fe839189b3b30dde *R/rtableICC.RxC.main.R
+1954d1ba804135e0af339425d5447b41 *inst/CITATION
 9af8062e4bdd124567c97113abd95e26 *man/print.rTableICC.Rd
 8891a1ce24b5d303117fbbf1a96a7064 *man/rDiscrete.Rd
 aaf985ea5812b9bec7e133e6216b3462 *man/rTable.2x2xK.Rd
 87889153b946ce42781a84217ba7b86c *man/rTable.RxC.Rd
 60209f2e79449eeef913eecb086d8997 *man/rTableICC-internal.Rd
-71c75e7b4c032435bd51c8a19364bb4a *man/rTableICC-package.Rd
+119b26a2363d031602a52fcfbc7a91c7 *man/rTableICC-package.Rd
 4facdbbe8533a90c84e21d88ba368800 *man/rTableICC.2x2xK.Rd
 289b804594a5e8b067fb35135b0edf7f *man/rTableICC.RxC.Rd
