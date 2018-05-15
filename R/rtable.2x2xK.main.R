@@ -1,7 +1,7 @@
 rtable.2x2xK.main <-
 function(p,sampling,N,K,lambda,print.raw){
   if (sampling=="Product"){
-    if ((length(N)==1) | (is.finite(N)==FALSE)){ 
+    if ((length(N)==1) | any(is.finite(N)==FALSE)){ 
       stop("Total number of observations under each center should be entered as a finite Kx1 vector under product multinomial samlping plan.")      
     }
     N=abs(round(N))  

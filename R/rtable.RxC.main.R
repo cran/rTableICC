@@ -10,7 +10,7 @@ function(p,row.margins,col.margins,sampling,N,lambda,print.raw){
     if (length(row.margins)>1){
       N=sum(row.margins)
       prob.margins=row.margins/N
-      if (round(apply(p,1,sum),10)!=round(prob.margins,10)){
+      if (any(round(apply(p,1,sum),10)!=round(prob.margins,10))){
         stop("Mismatch between cell probabilities and margin probabilities!")
       }     
       p=sweep(p, 1, prob.margins, "/")  
@@ -29,7 +29,7 @@ function(p,row.margins,col.margins,sampling,N,lambda,print.raw){
     }else if (length(col.margins)>1){
       N=sum(col.margins)
       prob.margins=col.margins/N
-      if (round(apply(p,1,sum),10)!=round(prob.margins,10)){
+      if (any(round(apply(p,1,sum),10)!=round(prob.margins,10))){
         stop("Mismatch between cell probabilities and margin probabilities!")
       }      
       p=sweep(p, 2, prob.margins, "/")
@@ -47,7 +47,7 @@ function(p,row.margins,col.margins,sampling,N,lambda,print.raw){
       }
     }    
   } else if (sampling=="Multinomial"){     
-    if ((length(N)!=1) | (is.finite(N)==FALSE)){ 
+    if ((length(N)!=1) | any(is.finite(N)==FALSE)){ 
       stop("Total number of observation should be entered as a scalar under multinomial samlping plan.")      
     }
     N=abs(round(N))

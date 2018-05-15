@@ -11,7 +11,7 @@ function(p,theta,M,sampling="Multinomial",N=0,lambda=2,zero.clusters=FALSE,print
   }
   num.cluster=M
   if (sampling=="Product"){
-    if ((length(N)!=K) | (is.finite(N)==FALSE)){ 
+    if ((length(N)!=K) | any(is.finite(N)==FALSE)){ 
       stop("Total number of observations in each center should be entered under product-multinomial samlping plan. Please enter a Kx1 dimensional vector as N!")      
     }else{
       N=abs(round(N))  
@@ -39,7 +39,7 @@ function(p,theta,M,sampling="Multinomial",N=0,lambda=2,zero.clusters=FALSE,print
       }
     }    
   }else if (sampling=="Multinomial"){      
-    if ((length(N)!=1) | (is.finite(N)==FALSE)){ 
+    if ((length(N)!=1) | any(is.finite(N)==FALSE)){ 
       stop("Total number of observations must be entered as a scalar greater than zero under multinomial samlping plan!")      
     }else{
       N=abs(round(N))

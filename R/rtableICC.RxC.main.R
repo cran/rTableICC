@@ -5,7 +5,7 @@ function(p=NULL,theta,M,row.margins=NULL,col.margins=NULL,sampling="Multinomial"
   T=length(theta)
    
   if (sampling=="Product"){ 
-    if ((is.null(p)==TRUE) | (length(dim(p))!=2) | (min(p)<0) | (max(p)>1) | (round(sum(p))!=1)){
+    if (any(is.null(p)==TRUE) | (length(dim(p))!=2) | (min(p)<0) | (max(p)>1) | (round(sum(p))!=1)){
       stop("Dimension of matrix (p>0) must be RxC and it must sum up to one!")
     } else {
       R=nrow(p)
@@ -14,7 +14,7 @@ function(p=NULL,theta,M,row.margins=NULL,col.margins=NULL,sampling="Multinomial"
         stop("Minimum colum or row length must be greater than 1!")
       } 
     }
-    if ((is.null(col.margins)==TRUE) & (is.null(row.margins)==TRUE)){
+    if (any(is.null(col.margins)==TRUE) & any(is.null(row.margins)==TRUE)){
       stop("Row or columun margins must be entered as a scalar vector!")
     } else if ((length(row.margins)>1) & (length(col.margins)>1)){
       stop("Number of either row or columun margins must be greater than one. Both cannot be greater than one!")
@@ -30,7 +30,7 @@ function(p=NULL,theta,M,row.margins=NULL,col.margins=NULL,sampling="Multinomial"
       row.margins=abs(round(row.margins))
       N=sum(row.margins)
       prob.margins=row.margins/N
-      if ((apply(p,1,sum)!=prob.margins)){
+      if (any((apply(p,1,sum)!=prob.margins))){
         stop("Mismatch between cell probabilities and margin probabilities!")
       }            
      
@@ -79,7 +79,7 @@ function(p=NULL,theta,M,row.margins=NULL,col.margins=NULL,sampling="Multinomial"
       col.margins=abs(round(col.margins))
       N=sum(col.margins)
       prob.margins=col.margins/N
-      if ((apply(p,2,sum)!=prob.margins)){
+      if (any((apply(p,2,sum)!=prob.margins))){
         stop("Mismatch between cell probabilities and margin probabilities!")
       }
       
@@ -126,7 +126,7 @@ function(p=NULL,theta,M,row.margins=NULL,col.margins=NULL,sampling="Multinomial"
     }   
     
   } else if (sampling=="Multinomial"){
-    if ((is.null(p)==TRUE) | (length(dim(p))!=2) | (min(p)<0) | (max(p)>1) | (round(sum(p))!=1)){
+    if (any(is.null(p)==TRUE) | (length(dim(p))!=2) | (min(p)<0) | (max(p)>1) | (round(sum(p))!=1)){
       stop("Dimension of matrix of cell probabilities (p>0) must be RxC and it must sum up to one!")
     } else {
       R=nrow(p)
@@ -135,7 +135,7 @@ function(p=NULL,theta,M,row.margins=NULL,col.margins=NULL,sampling="Multinomial"
         stop("Minimum colum or row length must be greater than 1!")
       }
     }    
-    if ((length(N)!=1) | (is.finite(N)==FALSE)){ 
+    if ((length(N)!=1) | any(is.finite(N)==FALSE)){ 
       stop("Total number of observation should be entered as a scalar under multinomial samlping plan.")      
     }else{
       N=abs(round(N))      

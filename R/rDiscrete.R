@@ -6,7 +6,7 @@ function(n=1,pf){
     if ((sum(is.finite(pf)) < length(pf)) | (is.null(pf) == TRUE) | (min.pf < 0) | (max.pf > 1) | (round(sum(pf))!=1)){
        stop("Sum of probabilities is not equal to one! Please enter a probability function.")
     }
-    if ((is.finite(n)==FALSE) | (is.null(n)==TRUE) | (min.n < 0) | (length(n)!=1) ){
+    if (any(is.finite(n)==FALSE) | any(is.null(n)==TRUE) | (min.n < 0) | (length(n)!=1) ){
       stop("Number of observations must be entered as a finite and positive scalar!")
     }
     

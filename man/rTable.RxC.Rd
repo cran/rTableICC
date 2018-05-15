@@ -123,7 +123,7 @@ cell.prob[1,3]=0.05
 cell.prob[2,1]=0.05
 cell.prob[2,2]=0.1
 cell.prob[2,3]=0.1
-cell.prob[3,1]=0.05
+cell.prob[3,1]=0.3
 cell.prob[3,2]=0.1
 cell.prob[3,3]=0.1                             # Marginal and cell probabilities 
                                                #  should be equal to each other
