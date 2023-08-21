@@ -71,7 +71,7 @@ Kroese D.P., Taimre T., Botev Z.I. (2011) \emph{Handbook of Monte Carlo Methods}
 \author{
 Haydar Demirhan
 
-Maintainer: Haydar Demirhan <haydarde@hacettepe.edu.tr>
+Maintainer: Haydar Demirhan <haydar.demirhan@rmit.edu.au>
 }
 
 \examples{

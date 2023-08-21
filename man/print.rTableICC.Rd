@@ -22,6 +22,6 @@ other arguments.
 \author{
 Haydar Demirhan
 
-Maintainer: Haydar Demirhan <haydarde@hacettepe.edu.tr>
+Maintainer: Haydar Demirhan <haydar.demirhan@rmit.edu.au>
 }
 

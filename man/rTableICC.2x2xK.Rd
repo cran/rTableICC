@@ -110,7 +110,7 @@ Demirhan, H. and Hamurkaroglu, C. (2008) Bayesian estimation of log odds ratios 
 \author{
 Haydar Demirhan
 
-Maintainer: Haydar Demirhan <haydarde@hacettepe.edu.tr>
+Maintainer: Haydar Demirhan <haydar.demirhan@rmit.edu.au>
 }
 
 \examples{

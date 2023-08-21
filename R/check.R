@@ -18,7 +18,7 @@ function(p, theta, M, N=NULL, K=NULL, row.margins=NULL, col.margins=NULL, lambda
       stop("Pre-determined intraclass correlations must be entered as a positive value!")
     }
     if (structure=="2x2xK"){
-      if (any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=2) |  (ncol(p)!=4) | (min(p)<=0) | (max(p)>=1) | (sum(p)!=1)){
+      if (any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=2) |  (ncol(p)!=4) | (min(p)<0) | (max(p)>=1) | (sum(p)!=1)){
         stop("Parameter p must be entered as a Kx4 finite matrix with elements within the interval [0,1] and sum up to 1!")
       }
       if (any(is.na(M)==TRUE) | any(is.finite(M)==FALSE) | (min(M)<0)) {
@@ -36,7 +36,7 @@ function(p, theta, M, N=NULL, K=NULL, row.margins=NULL, col.margins=NULL, lambda
         if ((length(N)!=1) | any(is.finite(N)==FALSE)){ 
           stop("Total number of observation should be entered as a scalar under multinomial samlping plan.")      
         }
-        if ((any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=3) | (dim(p)[1]!=2) | (dim(p)[2]!=2) | (min(p)<=0) | (max(p)>=1))){
+        if ((any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=3) | (dim(p)[1]!=2) | (dim(p)[2]!=2) | (min(p)<0) | (max(p)>=1))){
           stop("Parameter p must be entered as a 2x2xK finite matrix with elements within the interval [0,1]!")
         }
       } 
@@ -60,7 +60,7 @@ function(p, theta, M, N=NULL, K=NULL, row.margins=NULL, col.margins=NULL, lambda
           stop("At least one center must be entered!")
         } 
         
-        if ((any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=3) | (dim(p)[1]!=2) | (dim(p)[2]!=2) | (min(p)<=0) | (max(p)>=1))){
+        if ((any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=3) | (dim(p)[1]!=2) | (dim(p)[2]!=2) | (min(p)<0) | (max(p)>=1))){
           stop("Parameter p must be entered as a 2x2xK finite matrix with elements within the interval [0,1]!")
         }
       }
@@ -69,7 +69,7 @@ function(p, theta, M, N=NULL, K=NULL, row.margins=NULL, col.margins=NULL, lambda
         if ((length(N)!=1) | any(is.finite(N)==FALSE)){ 
           stop("Total number of observation should be entered as a scalar under multinomial samlping plan.")      
         }
-        if (any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=2) | (min(p)<=0) | (max(p)>=1)){
+        if (any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=2) | (min(p)<0) | (max(p)>=1)){
           stop("Parameter p must be entered as an RxC finite matrix with elements within the interval [0,1]!")
         }      
         if (min(dim(p))<=1){
@@ -84,7 +84,7 @@ function(p, theta, M, N=NULL, K=NULL, row.margins=NULL, col.margins=NULL, lambda
         } else if ((length(row.margins)<2) & (length(col.margins)<2)){
           stop("At least number of fixed row or columun margins must be greater than one under product multinomial sampling!")
         }
-        if (any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=2) | (min(p)<=0) | (max(p)>=1)){
+        if (any(is.na(p)==TRUE) | any(is.finite(p)==FALSE) | (length(dim(p))!=2) | (min(p)<0) | (max(p)>=1)){
           stop("Parameter p must be entered as an RxC finite matrix with elements within the interval [0,1]!")
         }  
       }

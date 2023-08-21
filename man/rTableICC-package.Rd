@@ -9,13 +9,7 @@ Random Generation of R x C and  2 x 2 x K Contingency Tables
 Contains functions for random generation of R x C and 2 x 2 x K contingency tables. In addition to the generation of contingency tables over predetermined intraclass-correlated clusters, it is possible to generate contingency tables without intraclass correlations under product multinomial, multinomial, and Poisson sampling plans. It also consists of a function for generation of random data from a given discrete probability distribution function (Demirhan, 2016).
 }
 \details{
-\tabular{ll}{
-Package: \tab rTableICC\cr
-Type: \tab Package\cr
-Version: \tab 1.0.6\cr
-Date: \tab 2018-01-18\cr
-License: \tab GPL-3\cr
-}
+
 
 To generate 2 x 2 x K and R x C contingency tables with intraclass-correlated observations under product multinomial, multinomial or Poisson sampling plans, respectively use \code{rTableICC.2x2xK} and \code{rTableICC.RxC} functions. 
 
@@ -27,7 +21,7 @@ To generate random data from an empirical probability function, use \code{rDiscr
 \author{
 Haydar Demirhan
 
-Maintainer: Haydar Demirhan <haydarde@hacettepe.edu.tr>
+Maintainer: Haydar Demirhan <haydar.demirhan@rmit.edu.au>
 }
 \references{
 Agresti A. (2002) \emph{Categorical Data Analysis}, Wiley, New York.
@@ -46,7 +40,6 @@ Demirhan, H. and Hamurkaroglu, C. (2008) Bayesian estimation of log odds ratios 
 Kroese D.P., Taimre T., Botev Z.I. (2011) \emph{Handbook of Monte Carlo Methods}, Wiley, New York. 
 }
 
-\keyword{datagen, contingency, correlation, intraclass, Poisson, multinomial, product}
 
 \seealso{
 \code{\link[rTableICC]{rTableICC.2x2xK}}, \code{\link[rTableICC]{rTableICC.RxC}}, \code{\link[rTableICC]{rTable.2x2xK}}, \code{\link[rTableICC]{rTable.RxC}}, \code{\link[rTableICC]{rDiscrete}}
